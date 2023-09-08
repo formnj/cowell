@@ -1,4 +1,8 @@
 const routes = [
+    {
+        path: '/',
+        component: () => import("@/components/HelloWorld"),
+    },
     // { //PC
     //     path: '/',
     //     component: () => import("@/views/pc/pc_wrap"),
