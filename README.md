@@ -22,3 +22,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### HTTPS
+https://github.com/formnj/cowell.git
+
+### SSH
+git@github.com:formnj/cowell.git
