@@ -1,0 +1,53 @@
+.v--modal-overlay {background-color:rgba(0,0,0,0.5) !important;touch-action:pan-x pan-y;}
+
+.modal_header {border-bottom:1px solid #ddd; position:relative; z-index:3;}
+.modal_header h2 {margin-bottom:0; padding:19px 30px; font-size:24px; font-weight:400; border-bottom:0; text-align:left !important;}
+.modal_header .btn_close {width:24px; height:24px; font-size:0; position:absolute; top:25px; right:26px; display:inline-block;}
+.modal_header .btn_close:before, .modal_header .btn_close:after {width:19px; border-top:1px solid #222; content:''; position:absolute; top:11px; right:1px; display:inline-block;}
+.modal_header .btn_close:before {transform:rotate(45deg);}
+.modal_header .btn_close:after {transform:rotate(-45deg);}
+
+.modal_bottom {margin-top:0; padding:20px; text-align:center; position:fixed; right:0; bottom:0; left:0; z-index:1;background:#fff;}
+
+.modal_content {max-height:100%; padding:30px; overflow:auto; position:relative;touch-action:pan-x pan-y;}
+.modal_header + .modal_content {max-height:calc(100vh - 62px);}
+.modal_bottom + .modal_content {max-height:calc(100vh - 100px); padding-bottom:0;}
+.modal_header + .modal_bottom + .modal_content {max-height:calc(100vh - 162px);}
+.v--modal-overlay.bottom .modal_bottom + .modal_content {padding-bottom:100px;}
+
+/*================ PC / MO 분리 예정 ==================*/
+/* 회원가입완료 팝업 */
+#modal[type='join_complete'] .modal_wrap {width:360px; top:50%; left:50%; transform:translate(-50%, -50%);}
+#modal[type='join_complete'] .modal_wrap .btn_big {max-height:50px;}
+#modal[type='join_complete'] .btn_close {display:none;}
+
+#modal[type='policy'] .modal_wrap {width:610px; max-height:687px; top:50%; left:50%; transform:translate(-50%, -50%);}
+
+/* modal type */
+#modal[type*='default'] .modal_wrap {width:610px; top:50%; left:50%; transform:translate(-50%, -50%);}
+#modal[type*='full'] .modal_wrap {max-width:610px; max-height:687px; top:50%; left:50%; transform:translate(-50%, -50%);}
+
+@media screen and (max-width:1023px) {
+    /* modal type */
+    #modal[type*='full'] .modal_wrap {width:100%; max-width:inherit; height:100%; max-height:inherit; top:0; left:0; transform:inherit;}
+    #modal[type*='default'] .modal_wrap {width:auto; top:50%; right:38px; left:38px; transform:translateY(-50%);}
+    #modal[type*='bottom'] .modal_wrap {top:auto; bottom:0;}
+
+    #modal[type='join_complete'] .modal_wrap {width:100%; top:auto; bottom:0; left:0; transform:translateY(0);}
+    #modal[type='changePW_info'] .modal_wrap {top:auto; bottom:0;}
+    #modal[type='changePW_info'] .btn_mid {height:60px;}
+
+    #modal[type='policy'] .modal_wrap {width:100%; max-width:inherit; height:100%; max-height:inherit; top:0; left:0; transform:inherit;}
+    #modal[type*='sso'] .modal_wrap {top:auto; bottom:0;}
+
+    .modal_header h2 {padding:20px 20px; font-size:18px;}
+    .modal_header .btn_close {top:17px; right:20px;}
+    .modal_header .btn_close:before, .modal_header .btn_close:after {width:23px; border-top:1px solid #222; content:''; position:absolute; top:11px; right:-1px; display:inline-block;}
+
+    .modal_content {padding:30px 20px;}
+
+    .modal_header + .modal_content {max-height:calc(100vh - 61px);}
+    .v--modal-box.v--modal{left:20px !important;right:20px !important;width:calc(100% - 40px) !important;}
+    .v--modal-overlay.bottom > .v--modal-background-click > .v--modal-box.v--modal{position:absolute;top:auto !important;left:0 !important;right:0 !important;bottom:0;width:100% !important;}
+    .v--modal-overlay.full > .v--modal-background-click > .v--modal-box.v--modal{position:absolute;top:0 !important;left:0 !important;right:0 !important;bottom:0;width:100% !important;}
+}
