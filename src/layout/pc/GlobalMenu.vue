@@ -100,6 +100,9 @@
 <script>
 import Inputs from "@/components/Inputs.vue"
 
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+
 export default {
     data () {
         return {
@@ -459,6 +462,9 @@ export default {
     },
     components: {
         Inputs,
+
+        Swiper,
+        SwiperSlide,
     },
     methods: {
         // openBrandCollection () {

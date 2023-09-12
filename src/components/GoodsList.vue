@@ -25,7 +25,6 @@ export default {
         isSwiper: false,
     },
     mounted() {
-        $(document).ready(function () {});
     },
 };
 </script>

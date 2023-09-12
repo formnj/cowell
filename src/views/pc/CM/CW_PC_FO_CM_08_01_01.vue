@@ -54,7 +54,8 @@
         <section class="special">
             <swiper :options="specialOptions">
                 <swiper-slide v-for="(item, index) in goods_item_special[0].item" :key="index">
-                    <GoodsItem :item="item" @hover="hover" @leave="leave" />
+                    <!-- <GoodsItem :item="item" @hover="hover" @leave="leave" /> -->
+                    <GoodsItem :item="item" />
                 </swiper-slide>
                 <div class="swiper-button-next" slot="pagination"></div>
                 <div class="swiper-button-prev" slot="button-next"></div>

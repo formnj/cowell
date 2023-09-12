@@ -21,7 +21,6 @@ export default {
         isDisabled: false,
     },
     mounted() {
-        $(document).ready(function () {});
     },
 };
 </script>
