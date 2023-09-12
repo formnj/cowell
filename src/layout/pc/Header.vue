@@ -70,7 +70,7 @@ import Inputs from '@/components/Inputs.vue';
 import GlobalMenu from '@/layout/pc/GlobalMenu.vue';
 import HistoryList from '@/layout/pc/HistoryList.vue';
 
-// import Search from "@/views/pc/DP/CW_PC_FO_DP_07_01_01";
+import Search from "@/views/pc/DP/CW_PC_FO_DP_07_01_01";
 
 import "@/assets/css/pc/common.css";
 import "@/assets/css/pc/modal.css";
@@ -81,7 +81,7 @@ export default {
         GlobalMenu,
         HistoryList,
 
-        // Search,
+        Search,
     },
     data() {
         return {

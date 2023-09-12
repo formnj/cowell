@@ -159,13 +159,13 @@
             <h3>NEW</h3>
             <Tabs tabClass="tab_type_default" v-bind:tab_item="tab_item_best" :tabidx="tabidx" />
 
-            <!-- <swiper :options="defaultOptions">
+            <swiper :options="defaultOptions">
                 <swiper-slide v-for="(item, index) in goods_item_MD[0].item" :key="index">
                     <GoodsItem :item="item" />
                 </swiper-slide>
                 <div class="swiper-button-prev" slot="button-prev"></div>
                 <div class="swiper-button-next" slot="button-next"></div>
-            </swiper> -->
+            </swiper>
         </section>
         <!-- //new -->
     </div>
@@ -174,7 +174,7 @@
 <script>
     import GoodsList from "@/components/GoodsList.vue";
     import GoodsItem from "@/components/GoodsItem.vue";
-    // import Tabs from "@/components/Tabs.vue";
+    import Tabs from "@/components/Tabs.vue";
 
     import { Swiper, SwiperSlide } from "vue-awesome-swiper";
     import "swiper/css/swiper.css";
@@ -185,7 +185,7 @@
         components: {
             GoodsList,
             GoodsItem,
-            // Tabs,
+            Tabs,
 
             Swiper,
             SwiperSlide,
