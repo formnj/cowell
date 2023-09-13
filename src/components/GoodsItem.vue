@@ -91,9 +91,10 @@ export default {
         /* //23.04.04 PC 사이즈 옵션 레이어 노출 관련 */
 
         /* 퍼블 확인용 링크 */
-        this.Path = window.location.pathname.split('/')[1]
-        if(this.Path == ''){
-            this.Path = 'pc';
+        this.Path = window.location.pathname.split('/')[2];
+        console.log('aaa:',this.Path);
+        if(this.Path == 'pc' || this.Path == ''){
+            this.Path = 'cowell/pc';
         }
         /* //퍼블 확인용 링크 */
     },

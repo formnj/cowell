@@ -88,17 +88,17 @@ export default {
             ],
 
             Service: [
-                '<a href="/pc/CC_03_01_01">FAQ</a>',
-                '<a href="/pc/MY_02_01_01">배송조회</a>',
-                '<a href="/pc/MY_02_02_01">교환 & 반품</a>',
-                '<a href="/pc/CC_01_01_01">고객센터</a>'
+                '<a href="/cowell/pc/CC_03_01_01">FAQ</a>',
+                '<a href="/cowell/pc/MY_02_01_01">배송조회</a>',
+                '<a href="/cowell/pc/MY_02_02_01">교환 & 반품</a>',
+                '<a href="/cowell/pc/CC_01_01_01">고객센터</a>'
             ],
 
             Help: [
-                '<a href="/pc/CM_05_01_01">이용약관</a>',
-                '<a href="/pc/CM_06_01_01"><strong>개인정보취급방침</strong></a>',
-                '<a href="/pc/CM_07_01_01">제휴안내</a>',
-                '<a href="/pc/MY_04_01_04">1:1문의하기</a>'
+                '<a href="/cowell/pc/CM_05_01_01">이용약관</a>',
+                '<a href="/cowell/pc/CM_06_01_01"><strong>개인정보취급방침</strong></a>',
+                '<a href="/cowell/pc/CM_07_01_01">제휴안내</a>',
+                '<a href="/cowell/pc/MY_04_01_04">1:1문의하기</a>'
             ],
 
             Quick: [

@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+        <script src="<%= BASE_URL %>js/jquery.min.js"></script>
+        <!-- <script src="<%= BASE_URL %>js/common.js"></script> -->
+        <!-- <script src="<%= BASE_URL %>js/swiper.js"></script> -->
+    </head>
+    <style>
+        .secret_menu {background-color:#222; position:fixed; top:0; right:0; left:0; z-index:9999; display:none;}
+        .secret_menu ul {margin:0; list-style:none; display:flex;}
+        .secret_menu li {flex:1; position:relative;}
+        .secret_menu li + li:before {border-left:1px solid #fff; content:''; position:absolute; top:10px; bottom:10px; left:0;}
+        .secret_menu a {padding:10px 0; color:#fff; text-align:center; display:block;}
+    </style>
+    <script>
+        $('*').keypress(function(e){
+            if(e.keyCode == 79){
+                $('.secret_menu').show();
+            }
+        });
+        $('*').click(function(){
+            $('.secret_menu').hide();
+        });
+    </script>
+    <body>
+        <noscript>
+            <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+
+        <!-- 가이드 및 페이지 확인용 -->
+        <div class="secret_menu">
+            <ul>
+                <li><a href="/Guide/">가이드</a></li>
+                <li><a href="/list/">페이지 리스트</a></li>
+                <li><a href="/cowell/">PC</a></li>
+                <li><a href="/mo">Mobile</a></li>
+            </ul>
+        </div>
+    </body>
 </html>
