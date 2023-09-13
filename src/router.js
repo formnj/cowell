@@ -320,7 +320,7 @@ const routes = [
             { // 회원탈퇴
                 path: "/cowell/pc/MY_05_06_01",
                 component: () => import("@/views/pc/MY/CW_PC_FO_MY_05_06_01")
-            },
+            }
         ]
     },
     { //MO
