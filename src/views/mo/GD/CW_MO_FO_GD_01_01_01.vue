@@ -1618,7 +1618,7 @@ export default {
         },
 
         onClickRedirect() {   
-            window.location.href = "/mo/OD_02_01_01";
+            window.location.href = "/cowell/mo/OD_02_01_01";
         }
     },
 }

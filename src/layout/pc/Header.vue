@@ -4,7 +4,7 @@
             <div class="ribbon">
 
                 <!-- 23.03.21 스와이퍼로 수정 -->
-                <!-- <div class="notice">
+                <div class="notice">
                     <swiper :options="ribbonOptions">
                         <swiper-slide v-for="(item, index) in notice" v-bind:key="index">
                             <a href="#none">{{ item }}</a>
@@ -13,7 +13,7 @@
                         <div class="swiper-button-prev" slot="button-prev"></div>
                         <div class="swiper-button-next" slot="button-next"></div>
                     </swiper>
-                </div> -->
+                </div>
                 <!-- //23.03.21 스와이퍼로 수정 -->
 
                 <button type="button" class="close_ribbon">공지사항 닫기</button>
@@ -160,23 +160,28 @@ export default {
                 BottomMenu = document.getElementsByClassName('header_btm'),
                 Container = document.getElementById('container');
 
-            let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-            
-            if(Ribbon.length > 0){
-                if(currentScrollPosition > (Ribbon[0].offsetHeight + BottomMenu[0].offsetTop)){
-                    Container.style.marginTop = (Ribbon[0].offsetHeight + TopMenu + BottomMenu[0].offsetHeight)+'px';
-                    document.querySelector('header').classList.add('fixed');
+                console.log(Container);
+
+            if(Container != null){
+
+                let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+                
+                if(Ribbon.length > 0){
+                    if(currentScrollPosition > (Ribbon[0].offsetHeight + BottomMenu[0].offsetTop)){
+                        Container.style.marginTop = (Ribbon[0].offsetHeight + TopMenu + BottomMenu[0].offsetHeight)+'px';
+                        document.querySelector('header').classList.add('fixed');
+                    } else {
+                        document.querySelector('header').classList.remove('fixed');
+                        Container.style.removeProperty('margin-top');
+                    }
                 } else {
-                    document.querySelector('header').classList.remove('fixed');
-                    Container.style.removeProperty('margin-top');
-                }
-            } else {
-                if(currentScrollPosition > BottomMenu[0].offsetTop){
-                    Container.style.marginTop = (TopMenu + BottomMenu[0].offsetHeight)+'px';
-                    document.querySelector('header').classList.add('fixed');
-                } else {
-                    document.querySelector('header').classList.remove('fixed');
-                    Container.style.removeProperty('margin-top');
+                    if(currentScrollPosition > BottomMenu[0].offsetTop){
+                        Container.style.marginTop = (TopMenu + BottomMenu[0].offsetHeight)+'px';
+                        document.querySelector('header').classList.add('fixed');
+                    } else {
+                        document.querySelector('header').classList.remove('fixed');
+                        Container.style.removeProperty('margin-top');
+                    }
                 }
             }
         },

@@ -848,69 +848,69 @@
         },
         methods:{
             pathFinder(pathName) {
-                if (pathName === '/mo/') {
+                if (pathName === '/cowell/mo/') {
                     this.pathClass = 'main'
                     this.onScroll();
                     this.visualInit();
-                } else if (pathName === '/mo/DP_01_01_01') {
+                } else if (pathName === '/cowell/mo/DP_01_01_01') {
                     this.pathClass = 'brand'
                     this.onScroll();
                     this.visualInit();
                 }
             },
-            visualInit(){
-                const winH = window.innerHeight,
-                    headerH = document.getElementsByTagName('header')[0].offsetHeight,
-                    visualH = document.getElementsByClassName('main_visual')[0].offsetHeight,
-                    visual_cont = document.querySelectorAll('.main_visual .cont'),
-                    actionBar = document.getElementById('action_bar'),
-                    pagination = document.getElementsByClassName('swiper-pagination')[0];
+            // visualInit(){
+            //     const winH = window.innerHeight,
+            //         headerH = document.getElementsByTagName('header')[0].offsetHeight,
+            //         visualH = document.getElementsByClassName('main_visual')[0].offsetHeight,
+            //         visual_cont = document.querySelectorAll('.main_visual .cont'),
+            //         actionBar = document.getElementById('action_bar'),
+            //         pagination = document.getElementsByClassName('swiper-pagination')[0];
 
-                if(winH < (headerH + visualH)){
-                    visual_cont.forEach((t) => {
-                        t.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) - 10)+'px';
-                        pagination.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) + 20)+'px';
-                    });
-                } else if(actionBar.offsetTop < (headerH + visualH)) {
-                    visual_cont.forEach((t) => {
-                        t.style.bottom = ((headerH + visualH)-actionBar.offsetTop - 10)+'px';
-                        pagination.style.bottom = ((headerH + visualH)-actionBar.offsetTop + 14)+'px';
-                    });
-                }
-            },
-            onScroll () {
-                const winH = window.innerHeight,
-                    headerH = document.getElementsByTagName('header')[0].offsetHeight,
-                    visualH = document.getElementsByClassName('main_visual')[0].offsetHeight,
-                    visual_cont = document.querySelectorAll('.main_visual .cont'),
-                    actionBar = document.getElementById('action_bar'),
-                    pagination = document.getElementsByClassName('swiper-pagination')[0];
+            //     if(winH < (headerH + visualH)){
+            //         visual_cont.forEach((t) => {
+            //             t.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) - 10)+'px';
+            //             pagination.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) + 20)+'px';
+            //         });
+            //     } else if(actionBar.offsetTop < (headerH + visualH)) {
+            //         visual_cont.forEach((t) => {
+            //             t.style.bottom = ((headerH + visualH)-actionBar.offsetTop - 10)+'px';
+            //             pagination.style.bottom = ((headerH + visualH)-actionBar.offsetTop + 14)+'px';
+            //         });
+            //     }
+            // },
+            // onScroll () {
+            //     const winH = window.innerHeight,
+            //         headerH = document.getElementsByTagName('header')[0].offsetHeight,
+            //         visualH = document.getElementsByClassName('main_visual')[0].offsetHeight,
+            //         visual_cont = document.querySelectorAll('.main_visual .cont'),
+            //         actionBar = document.getElementById('action_bar'),
+            //         pagination = document.getElementsByClassName('swiper-pagination')[0];
 
-                if (window.scrollY < this.lastScrollY && window.scrollY < (actionBar.offsetHeight)) {
-                    if(winH < (headerH + visualH)){
-                        visual_cont.forEach((t) => {
-                            t.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) - 10)+'px';
-                            pagination.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) + 20)+'px';
-                        });
-                    } else if(actionBar.offsetTop < (headerH + visualH)) {
-                        visual_cont.forEach((t) => {
-                            t.style.bottom = ((headerH + visualH)-actionBar.offsetTop - 10)+'px';
-                            pagination.style.bottom = ((headerH + visualH)-actionBar.offsetTop + 14)+'px';
-                        });
-                    }
-                } else {
-                    visual_cont.forEach((t) => {
-                        t.style.removeProperty('bottom');
-                        pagination.style.removeProperty('bottom');
-                    });
-                }
+            //     if (window.scrollY < this.lastScrollY && window.scrollY < (actionBar.offsetHeight)) {
+            //         if(winH < (headerH + visualH)){
+            //             visual_cont.forEach((t) => {
+            //                 t.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) - 10)+'px';
+            //                 pagination.style.bottom = (visualH - (winH - headerH -actionBar.offsetHeight) + 20)+'px';
+            //             });
+            //         } else if(actionBar.offsetTop < (headerH + visualH)) {
+            //             visual_cont.forEach((t) => {
+            //                 t.style.bottom = ((headerH + visualH)-actionBar.offsetTop - 10)+'px';
+            //                 pagination.style.bottom = ((headerH + visualH)-actionBar.offsetTop + 14)+'px';
+            //             });
+            //         }
+            //     } else {
+            //         visual_cont.forEach((t) => {
+            //             t.style.removeProperty('bottom');
+            //             pagination.style.removeProperty('bottom');
+            //         });
+            //     }
 
-                this.lastScrollY = window.scrollY
+            //     this.lastScrollY = window.scrollY
 
-                var scrollTop = window.scrollY
-                var innerHeight = window.outerHeight;
-                var scrollHeight = document.body.offsetHeight;
-            },
+            //     var scrollTop = window.scrollY
+            //     var innerHeight = window.outerHeight;
+            //     var scrollHeight = document.body.offsetHeight;
+            // },
         }
         /* //23.04.11 메인비주얼 콘텐츠 위치 조정 */
     }
