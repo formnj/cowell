@@ -1,20 +1,11 @@
 <template>
-<<<<<<< HEAD:src/layout/Header.vue
-    <header>Header</header>
-</template>
-  
-<script>
-</script>
-
-<style scoped></style>
-=======
     <header
         ref="header"
         v-show="$route.path.split('/')[2] == null || $route.path.split('/')[2] == '' || $route.path.split('/')[2] == 'DP_01_01_01'"
         :class="[ pathClass, scrollClass ]"
     >
         <div class="header_wrap" ref="headerTop">
-            <h1><router-link to="/mo/">COWELL FASHION - MO</router-link></h1>
+            <h1><router-link to="/cowell/mo/">COWELL FASHION - MO</router-link></h1>
             <!-- search -->
             <div class="search_wrap">
                 <button class="btn_search" @click.prevent="openSearchModal">검색</button>
@@ -22,7 +13,7 @@
             <!-- //search -->
             <ul class="quick">
                 <li class="cart">
-                    <router-link to="/mo/OD_01_02_01">장바구니</router-link>
+                    <router-link to="/cowell/mo/OD_01_02_01">장바구니</router-link>
                     <span class="count">99</span>
                 </li>
             </ul>
@@ -423,10 +414,11 @@ export default {
     },
     methods: {
         pathFinder(pathName) {
-            if (pathName === '/mo/') {
+            console.log(pathName);
+            if (pathName === '/cowell/mo/') {
                 this.pathClass = 'main'
                 this.scrollClass = ''
-            } else if (pathName === '/mo/DP_01_01_01') {
+            } else if (pathName === '/cowell/mo/DP_01_01_01') {
                 this.pathClass = 'brand'
                 this.scrollClass = 'fixed theme_transparent'
             } else {
@@ -537,4 +529,3 @@ header.theme_transparent li.current > a {color:#fff;}
 header.theme_transparent .btn_search {background-position:50% 100%;}
 header.theme_transparent .quick li.cart a {background-position:50% 100%;}
 </style>
->>>>>>> 0c3bcec96eb01bd69e9d683f6e062c41a026a059:src/layout/mo/Header.vue

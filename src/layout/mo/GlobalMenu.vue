@@ -65,8 +65,8 @@
                         <div class="recommend_links">
                             <ul>
                                 <li><a href="">베스트</a></li>
-                                <!-- <li><a href="/mo/PM_04_01_01">기획전</a></li> 23.04.21 제거 -->
-                                <li><a href="/mo/PM_06_01_01">이벤트</a></li>
+                                <!-- <li><a href="/cowell/mo/PM_04_01_01">기획전</a></li> 23.04.21 제거 -->
+                                <li><a href="/cowell/mo/PM_06_01_01">이벤트</a></li>
                             </ul>
                         </div>
                     </div>
@@ -145,9 +145,9 @@
             <!-- 23.04.06 tab_content에서 바깥으로 위치 이동 -->
             <div class="section">
                 <div class="shortcut_links">
-                    <a href="/mo/CC_01_01_01" class="link">고객센터</a>
-                    <a href="/mo/CC_02_01_01" class="link">공지사항</a>
-                    <a href="/mo/MY_04_01_04" class="link">1:1문의</a>
+                    <a href="/cowell/mo/CC_01_01_01" class="link">고객센터</a>
+                    <a href="/cowell/mo/CC_02_01_01" class="link">공지사항</a>
+                    <a href="/cowell/mo/MY_04_01_04" class="link">1:1문의</a>
                 </div>
             </div>
             <div class="section">

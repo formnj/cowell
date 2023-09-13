@@ -1,11 +1,11 @@
 <template>
     <div class="list_wrap">
         <ul class="tab">
-            <li class="active">PC</li>
-            <li>MO</li>
+            <li>PC</li>
+            <li class="active">MO</li>
         </ul>
         <dl>
-            <dt class="active">================== PC ==================</dt>
+            <dt>================== PC ==================</dt>
             <dd data="pc">
                 <table>
                     <colgroup>
@@ -36,7 +36,7 @@
                     <tbody></tbody>
                 </table>
             </dd>
-            <dt>================== MO ==================</dt>
+            <dt class="active">================== MO ==================</dt>
             <dd data="mo">
                 <table>
                     <colgroup>
@@ -118,13 +118,13 @@ export default {
                 ['공통','액션바','','','/layout/mo/ActionBar.vue','','',''],
                 ['공통','','브랜드','','/layout/mo/BrandsLayer.vue','','팝업','액션바 [Brand] 클릭 시 노출'],
                 ['공통','','최근 본 상품','','/layout/mo/BrandsLayer.vue','','팝업','액션바 [Brand] 클릭 시 노출'],
-                ['공통','App 인트로','','','/views/mo/AP/CW_AP_FO_CM_05_01_01','/ap/CM_05_01_01','페이지',''],
+                ['공통','App 인트로','','','/views/mo/AP/CW_AP_FO_CM_05_01_01','/cowell/ap/CM_05_01_01','페이지',''],
                 ['공통','이용약관','','','/views/mo/CM/CW_MO_FO_CM_06_01_01','/cowell/mo/CM_06_01_01','페이지',''],
                 ['공통','개인정보취급방침','','','/views/mo/CM/CW_MO_FO_CM_07_01_01','/cowell/mo/CM_07_01_01','페이지',''],
                 ['공통','제휴안내','','','/views/mo/CM/CW_MO_FO_CM_08_01_01','/cowell/mo/CM_08_01_01','페이지',''],
                 ['공통','404에러','','','/views/mo/CM/CW_MO_FO_CM_10_01_01','/cowell/mo/CM_10_01_01','페이지',''],
 
-                ['통합몰 메인','','','','/views/mo/CM/CW_MO_FO_CM_09_01_01','/mo','페이지',''],
+                ['통합몰 메인','','','','/views/mo/CM/CW_MO_FO_CM_09_01_01','/cowell/mo','페이지',''],
 
                 ['브랜드 전용관','메인','','','/views/mo/DP/CW_MO_FO_DP_01_01_01','/cowell/mo/DP_01_01_01','페이지',''],
                 ['브랜드 전용관','브랜드 카테고리','','','/views/mo/DP/CW_MO_FO_DP_02_01_01','/cowell/mo/DP_02_01_01','페이지',''],
@@ -378,7 +378,7 @@ export default {
                 $('[data="comm"] tbody').append('<tr>'
                 +   '<td>'+list_Arry_com[i][0]+'</td>' // 1depth
                 +   '<td>'+list_Arry_com[i][1]+'</td>' // 2depth
-                // <router-link to="/mo/MB_08_01_01">
+                // <router-link to="/cowell/mo/MB_08_01_01">
                 +   '<td class="ac"><a href="'+list_Arry_com[i][2]+'" target="_blank">'+list_Arry_com[i][2]+'</a></td>'
                 +   '<td class="ac">'+list_Arry_com[i][3]+'</td>'
                 +   '<td class="ac">'+list_Arry_com[i][4]+'</td>'

@@ -3,8 +3,8 @@
         <ul><!-- 해당 메뉴 활성화에 active 클래스 추가 -->
             <li class="menu"><a href="#none" @click.prevent="openGlobalMenu">MENU</a></li>
             <li class="his"><a href="#none" @click.prevent="openHistory">HIS</a></li>
-            <li class="home"><router-link to="/mo/">HOME</router-link></li>
-            <li class="my"><router-link to="/mo/MB_01_01_01">MY</router-link></li>
+            <li class="home"><router-link to="/cowell/mo/">HOME</router-link></li>
+            <li class="my"><router-link to="/cowell/mo/MB_01_01_01">MY</router-link></li>
         </ul>
         <a href="javascript:void(0);" class="brand" @click.prevent="openBrandLayer"><em>Brand</em></a>
     </div>

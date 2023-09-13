@@ -69,7 +69,7 @@ export default {
                 '<a href="#none">FAQ</a>',
                 '<a href="#none">배송조회</a>',
                 '<a href="#none">교환 & 반품</a>',
-                '<a href="/mo/CC_01_01_01">고객센터</a>'
+                '<a href="/cowell/mo/CC_01_01_01">고객센터</a>'
             ],
 
             Help: [
@@ -85,9 +85,9 @@ export default {
                 '<a href="#none">SSL 인증서 정보</a>',
             ],
             Quick02: [
-                '<a href="/mo/CM_06_01_01">이용안내</a>',
-                '<a href="/mo/CM_07_01_01">개인정보취급방침</a>',
-                '<a href="/mo/CM_08_01_01">제휴안내</a>',
+                '<a href="/cowell/mo/CM_06_01_01">이용안내</a>',
+                '<a href="/cowell/mo/CM_07_01_01">개인정보취급방침</a>',
+                '<a href="/cowell/mo/CM_08_01_01">제휴안내</a>',
             ],
 
         }

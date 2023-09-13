@@ -96,6 +96,9 @@ export default {
         if(this.Path == 'pc' || this.Path == ''){
             this.Path = 'cowell/pc';
         }
+        if(this.Path == 'mo'){
+            this.Path = 'cowell/mo';
+        }
         /* //퍼블 확인용 링크 */
     },
     methods:{
