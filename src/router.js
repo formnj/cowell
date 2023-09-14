@@ -1,6 +1,8 @@
+var path = '/cowell/';
+console.log(window.location.hostname);
 const routes = [
     { //PC
-        path: '/cowell/',
+        path: path,
         component: () => import("@/views/pc/pc_wrap"),
         name: 'pc',
         children: [
