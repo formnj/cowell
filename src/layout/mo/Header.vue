@@ -1,7 +1,7 @@
 <template>
     <header
         ref="header"
-        v-show="$route.path.split('/')[2] == null || $route.path.split('/')[2] == '' || $route.path.split('/')[2] == 'DP_01_01_01'"
+        v-show="$route.path.split('/')[3] == null || $route.path.split('/')[3] == '' || $route.path.split('/')[3] == 'DP_01_01_01'"
         :class="[ pathClass, scrollClass ]"
     >
         <div class="header_wrap" ref="headerTop">
