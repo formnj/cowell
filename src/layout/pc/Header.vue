@@ -160,8 +160,6 @@ export default {
                 BottomMenu = document.getElementsByClassName('header_btm'),
                 Container = document.getElementById('container');
 
-                console.log(Container);
-
             if(Container != null){
 
                 let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
