@@ -324,7 +324,7 @@ const routes = [
         ]
     },
     { //MO
-        path: '/mo',
+        path: '/cowell/mo',
         component: () => import("@/views/mo/mo_wrap"),
         name: 'mo',
         children: [
