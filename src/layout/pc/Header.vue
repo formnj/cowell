@@ -23,7 +23,7 @@
             <div class="header_top">
                 <h1>
                     <img :src="brandLogo" v-if="$route.path.split('/')[2] == 'DP_01_01_01'" />
-                    <router-link to="/" v-else>COWELL FASHION - PC</router-link>
+                    <router-link to="/cowell/" v-else>COWELL FASHION - PC</router-link>
                 </h1>
                 <ul class="quick_member">
                     <li><router-link to="/cowell/pc/MB_01_01_01">LOGIN</router-link></li>
