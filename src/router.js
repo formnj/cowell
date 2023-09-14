@@ -1,8 +1,9 @@
-if(window.location.hostname == 'formnj.github.io'){
-    var path = '/cowell/';
-} else {
-    var path = '/';
-}
+var path = '/cowell/';
+// if(window.location.hostname == 'formnj.github.io'){
+//     var path = '/cowell/';
+// } else {
+//     var path = '/';
+// }
 
 const routes = [
     { //PC

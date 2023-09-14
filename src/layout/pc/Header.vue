@@ -143,6 +143,11 @@ export default {
         });
         /* //23.03.28 검색팝업 노출 시 body 고정 */
     },
+    watch: {
+        '$route' (to, from) {
+        console.log(to)
+        }
+    },
     methods: {
         openModal (name) {
             this.$modal.show(name)

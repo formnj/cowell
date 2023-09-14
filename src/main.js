@@ -21,7 +21,7 @@ Vue.use(CommonJs)
 Vue.use(VueZoomer)
  
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   routes,
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
