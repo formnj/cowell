@@ -3,7 +3,7 @@ if(window.location.hostname == 'formnj.github.io'){
 } else {
     var path = '/';
 }
-console.log(path);
+
 const routes = [
     { //PC
         path: path,

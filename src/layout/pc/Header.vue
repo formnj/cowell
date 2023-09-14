@@ -1,5 +1,6 @@
 <template>
     <header :class="{'brand_main' : $route.path.split('/')[2] == 'DP_01_01_01'}">
+        {{ path }}
         <div class="ribbon_wrap">
             <div class="ribbon">
 
@@ -23,20 +24,20 @@
             <div class="header_top">
                 <h1>
                     <img :src="brandLogo" v-if="$route.path.split('/')[2] == 'DP_01_01_01'" />
-                    <router-link to="/cowell/" v-else>COWELL FASHION - PC</router-link>
+                    <router-link :to="path" v-else>COWELL FASHION - PC</router-link>
                 </h1>
                 <ul class="quick_member">
-                    <li><router-link to="/cowell/pc/MB_01_01_01">LOGIN</router-link></li>
-                    <li><router-link to="/cowell/pc/MB_08_01_01">JOIN</router-link></li>
+                    <li><router-link :to="path+'pc/MB_01_01_01'">LOGIN</router-link></li>
+                    <li><router-link :to="path+'pc/MB_08_01_01'">JOIN</router-link></li>
                     <li><router-link to="">INFO</router-link></li>
-                    <li><router-link to="/cowell/pc/MY_01_01_01">MY</router-link></li>
+                    <li><router-link :to="path+'pc/MY_01_01_01'">MY</router-link></li>
                 </ul>
             </div>
             <div class="header_btm">
                 <GlobalMenu />
                 <!-- 브랜드 메인 아닐 때 -->
                 <ul class="quick_sites" v-if="$route.path.split('/')[2] != 'DP_01_01_01'">
-                    <li><router-link to="/cowell/pc/DP_06_01_01"><img src="@/assets/images/pc/common/brand_fifa.png" alt="FIFA Official Licensed Product" /></router-link></li>
+                    <li><router-link :to="path+'pc/DP_06_01_01'"><img src="@/assets/images/pc/common/brand_fifa.png" alt="FIFA Official Licensed Product" /></router-link></li>
                     <li><router-link to=""><img src="@/assets/images/pc/common/brand_bbc.png" alt="BBC earth" /></router-link></li>
                 </ul>
                 <!-- //브랜드 메인 아닐 때 -->
@@ -85,6 +86,7 @@ export default {
     },
     data() {
         return {
+            path: String,
             TopHeight: '',
             /* menu */
             post: [],
@@ -142,6 +144,14 @@ export default {
             document.getElementsByTagName('body')[0].classList.add('fixed');
         });
         /* //23.03.28 검색팝업 노출 시 body 고정 */
+
+        if(window.location.hostname == 'formnj.github.io'){
+            this.path = '/cowell/';
+        } else {
+            this.path = '/';
+        }
+
+        console.log('testes'+this.path);
     },
     methods: {
         openModal (name) {
