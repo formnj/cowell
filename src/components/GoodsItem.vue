@@ -97,9 +97,9 @@ export default {
         //     this.path = '/'
         // }
 
-        console.log('aa : '+window.location.pathname.split('/')[1]);
+        // console.log('aa : '+window.location.pathname.split('/')[1]);
         this.path = window.location.pathname.split('/')[1];
-        console.log('aaa:',this.path);
+        // console.log('aaa:',this.path);
         if(this.path == 'pc' || this.path == ''){
             this.path = 'pc/';
         }

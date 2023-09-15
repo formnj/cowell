@@ -28,6 +28,33 @@
         $('*').click(function(){
             $('.secret_menu').hide();
         });
+
+        var path,
+            device;
+
+        if(window.location.hostname == 'formnj.github.io'){
+            path = '/cowell/'; //git 확인 주소
+        } else {
+            path = '/'; //local 확인 주소
+        }
+
+        if(window.location.pathname.split('/')[1] == '' || window.location.pathname.split('/')[1] == 'pc'){
+            device = 'pc';
+        } else {
+            device = 'mo';
+        }
+
+        console.log('aa : '+path+','+device);
+
+        $(function(){
+            $('.secret_menu a').each(function(){
+                $(this).attr('data-href',$(this).attr('href'));
+
+                $(this).attr('href',(path+$(this).attr('data-href')));
+            });
+        });
+
+        
     </script>
     <body>
         <noscript>
@@ -39,10 +66,10 @@
         <!-- 가이드 및 페이지 확인용 -->
         <div class="secret_menu">
             <ul>
-                <li><a href="/cowell/Guide/">가이드</a></li>
-                <li><a href="/cowell/List/">페이지 리스트</a></li>
-                <li><a href="/cowell/">PC</a></li>
-                <li><a href="/cowell/mo/">Mobile</a></li>
+                <li><a href="Guide/">가이드</a></li>
+                <li><a href="List/">페이지 리스트</a></li>
+                <li><a href="">PC</a></li>
+                <li><a href="mo/">Mobile</a></li>
             </ul>
         </div>
     </body>

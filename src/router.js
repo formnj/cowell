@@ -1,13 +1,13 @@
 
 // var path = '/cowell/';
-console.log(window.location.hostname);
+// console.log(window.location.hostname);
 if(window.location.hostname == 'formnj.github.io'){
     var path = '/cowell/';
 } else {
     var path = '/';
 }
 
-console.log(path)
+// console.log(path)
 const routes = [
     { //PC
         path: path,
