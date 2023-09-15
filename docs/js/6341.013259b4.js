@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkcowell"]=self["webpackChunkcowell"]||[]).push([[6341],{6341:function(e,n,t){t.r(n),t.d(n,{default:function(){return s}});var r=function(){var e=this,n=e._self._c;return n("div",[n("Header"),n("div",{attrs:{id:"container"}},[n("router-view")],1)],1)},u=[],a=t(6264),l={name:"App",components:{Header:a.Z},data(){return{}},mounted(){}},c=l,o=t(1001),i=(0,o.Z)(c,r,u,!1,null,"eb840390",null),s=i.exports}}]);
-//# sourceMappingURL=6341.013259b4.js.map

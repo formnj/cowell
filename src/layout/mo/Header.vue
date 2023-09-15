@@ -5,7 +5,7 @@
         :class="[ pathClass, scrollClass ]"
     >
         <div class="header_wrap" ref="headerTop">
-            <h1><router-link to="/cowell/mo/">COWELL FASHION - MO</router-link></h1>
+            <h1><router-link :to="path">COWELL FASHION - MO</router-link></h1>
             <!-- search -->
             <div class="search_wrap">
                 <button class="btn_search" @click.prevent="openSearchModal">검색</button>
@@ -346,6 +346,7 @@ import "@/assets/css/mo/modal.css";
 export default {
     data() {
         return {
+            path: String,
             /* menu brand image */
             gnb_brand_1: [
                 {img: require("@/assets/images/mo/sample/visual01.png")},
@@ -410,7 +411,13 @@ export default {
         this.headerTopHeight = this.$refs.headerTop.clientHeight
         window.addEventListener('scroll', this.onScroll)
 
-        window.addEventListener('load', this.headerInit)
+        window.addEventListener('load', this.headerInit);
+
+        if(window.location.hostname == 'formnj.github.io'){
+            this.path = '/cowell/mo/';
+        } else {
+            this.path = '/mo/'
+        }
     },
     methods: {
         pathFinder(pathName) {
