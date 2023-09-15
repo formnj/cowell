@@ -1,5 +1,6 @@
 <template>
     <div class="goods_item">
+        {{ path }}
         <a :href="path+'GD_01_01_01'"><!-- 퍼블 확인용 링크 -->
             <span class="thumb">
                 <em><img v-bind:src="item.img" /></em>
