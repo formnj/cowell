@@ -71,7 +71,7 @@ export default {
         isWish: false,
         isCart: false,
         optionActive: false,
-        path:String,
+        device:String,
     },
     mounted() {
         /* 23.04.04 PC 사이즈 옵션 레이어 노출 관련 */
@@ -97,15 +97,15 @@ export default {
         // } else {
         //     this.path = '/'
         // }
-
-        // console.log('aa : '+window.location.pathname.split('/')[1]);
         this.path = window.location.pathname.split('/')[1];
+
+        console.log('aa : '+path);
         // console.log('aaa:',this.path);
         if(this.path == 'pc' || this.path == ''){
-            this.path = 'pc/';
+            this.path = '/pc/';
         }
         if(this.path == 'mo'){
-            this.path = 'mo/';
+            this.path = '/mo/';
         }
         /* //퍼블 확인용 링크 */
     },
