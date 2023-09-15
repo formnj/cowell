@@ -1,6 +1,6 @@
 <template>
     <div class="goods_item">
-        <a :href="'/'+Path+'/GD_01_01_01'"><!-- 퍼블 확인용 링크 -->
+        <a :href="path+'GD_01_01_01'"><!-- 퍼블 확인용 링크 -->
             <span class="thumb">
                 <em><img v-bind:src="item.img" /></em>
                 <i v-if="item.option_icon">{{item.option_icon}}</i><!-- 23.04.18 관리자 등록 옵션 값 추가 -->
@@ -70,7 +70,7 @@ export default {
         isWish: false,
         isCart: false,
         optionActive: false,
-        Path:String,
+        path:String,
     },
     mounted() {
         /* 23.04.04 PC 사이즈 옵션 레이어 노출 관련 */
@@ -91,13 +91,20 @@ export default {
         /* //23.04.04 PC 사이즈 옵션 레이어 노출 관련 */
 
         /* 퍼블 확인용 링크 */
-        this.Path = window.location.pathname.split('/')[2];
-        console.log('aaa:',this.Path);
-        if(this.Path == 'pc' || this.Path == ''){
-            this.Path = 'cowell/pc';
+        // if(window.location.hostname == 'formnj.github.io'){
+        //     this.path = '/cowell/';
+        // } else {
+        //     this.path = '/'
+        // }
+
+        console.log('aa : '+window.location.pathname.split('/')[1]);
+        this.path = window.location.pathname.split('/')[1];
+        console.log('aaa:',this.path);
+        if(this.path == 'pc' || this.path == ''){
+            this.path = 'pc/';
         }
-        if(this.Path == 'mo'){
-            this.Path = 'cowell/mo';
+        if(this.path == 'mo'){
+            this.path = 'mo/';
         }
         /* //퍼블 확인용 링크 */
     },

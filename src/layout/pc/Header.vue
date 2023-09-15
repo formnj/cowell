@@ -23,20 +23,20 @@
             <div class="header_top">
                 <h1>
                     <img :src="brandLogo" v-if="$route.path.split('/')[2] == 'DP_01_01_01'" />
-                    <router-link to="/cowell/" v-else>COWELL FASHION - PC</router-link>
+                    <router-link :to="path" v-else>COWELL FASHION - PC</router-link>
                 </h1>
                 <ul class="quick_member">
-                    <li><router-link to="/cowell/pc/MB_01_01_01">LOGIN</router-link></li>
-                    <li><router-link to="/cowell/pc/MB_08_01_01">JOIN</router-link></li>
+                    <li><router-link :to="path+'pc/MB_01_01_01'">LOGIN</router-link></li>
+                    <li><router-link :to="path+'pc/MB_08_01_01'">JOIN</router-link></li>
                     <li><router-link to="">INFO</router-link></li>
-                    <li><router-link to="/cowell/pc/MY_01_01_01">MY</router-link></li>
+                    <li><router-link :to="path+'pc/MY_01_01_01'">MY</router-link></li>
                 </ul>
             </div>
             <div class="header_btm">
                 <GlobalMenu />
                 <!-- 브랜드 메인 아닐 때 -->
                 <ul class="quick_sites" v-if="$route.path.split('/')[2] != 'DP_01_01_01'">
-                    <li><router-link to="/cowell/pc/DP_06_01_01"><img src="@/assets/images/pc/common/brand_fifa.png" alt="FIFA Official Licensed Product" /></router-link></li>
+                    <li><router-link :to="path+'pc/DP_06_01_01'"><img src="@/assets/images/pc/common/brand_fifa.png" alt="FIFA Official Licensed Product" /></router-link></li>
                     <li><router-link to=""><img src="@/assets/images/pc/common/brand_bbc.png" alt="BBC earth" /></router-link></li>
                 </ul>
                 <!-- //브랜드 메인 아닐 때 -->
@@ -50,7 +50,7 @@
                     <li><a href="javascript:void(0);" @click="isSearchActive = true" class="search"></a></li>
                     <!-- //23.03.28 검색팝업 노출 시 body 고정 -->
                     <li>
-                        <router-link to="/cowell/pc/OD_01_02_01" class="cart"></router-link>
+                        <router-link :to="path+'pc/OD_01_02_01'" class="cart"></router-link>
                         <span class="count">99</span>
                     </li>
                     <li><a href="" class="recent" @click.prevent="openHistory"></a></li>
@@ -144,7 +144,13 @@ export default {
         });
         /* //23.03.28 검색팝업 노출 시 body 고정 */
 
-        console.log(window.location.pathname);
+        if(window.location.hostname == 'formnj.github.io'){
+            this.path = '/cowell/';
+        } else {
+            this.path = '/'
+        }
+
+        // console.log(window.location.hostname+' / '+this.path);
     },
     // watch: {
     //     '$route' (to, from) {

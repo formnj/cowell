@@ -1087,7 +1087,7 @@ export default {
                 resY =  maxY
             }
 
-            console.log(minX, posX, maxX)
+            // console.log(minX, posX, maxX)
 
             img.style.transform = 'scale(2) translateX(' + (-1 * resX) + 'px) translateY(' + (-1 * resY) + 'px)'
         },
