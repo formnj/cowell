@@ -99,7 +99,7 @@ export default {
         // }
         this.path = window.location.pathname.split('/')[1];
 
-        console.log('aa : '+this.path);
+        console.log('dd : '+this.path);
         // console.log('aaa:',this.path);
         if(this.path == 'pc' || this.path == ''){
             this.path = '/pc/';
