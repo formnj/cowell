@@ -85,6 +85,7 @@ export default {
     },
     data() {
         return {
+            path: String,
             TopHeight: '',
             /* menu */
             post: [],
@@ -142,6 +143,8 @@ export default {
             document.getElementsByTagName('body')[0].classList.add('fixed');
         });
         /* //23.03.28 검색팝업 노출 시 body 고정 */
+
+        console.log(window.location.pathname);
     },
     // watch: {
     //     '$route' (to, from) {
