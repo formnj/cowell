@@ -38,13 +38,13 @@
             path = '/'; //local 확인 주소
         }
 
+        console.log('aa : '+path+','+device+' , '+window.location.pathname.split('/'));
+
         if(window.location.pathname.split('/')[1] == undefined || window.location.pathname.split('/')[1] == '' || window.location.pathname.split('/')[1] == 'pc'){
             device = 'pc';
         } else {
             device = 'mo';
         }
-
-        console.log('aa : '+path+','+device+' , '+window.location.pathname.split('/'));
 
         $(function(){
             $('.secret_menu a').each(function(){
