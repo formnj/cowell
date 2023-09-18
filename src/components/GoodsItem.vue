@@ -97,7 +97,7 @@ export default {
         //     this.path = '/'
         // }
         path = window.location.pathname.split('/')[1];
-        console.log('aaa:',path);
+        // console.log('aaa:',path);
         if(path == 'pc' || path == undefined || path == '' || path == 'Guide'){
             this.path = '/pc/';
         }

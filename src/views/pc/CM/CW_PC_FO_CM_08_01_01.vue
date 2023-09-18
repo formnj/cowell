@@ -194,6 +194,7 @@
         },
         data() {
             return {
+                path: String,
                 /* sample data */
                 Main_slide_item: [
                     {img: require("@/assets/images/pc/sample/sam_video.mp4"), type:'video', brand: "pc-Ourplace", tit: "Best Sweatshirt", txt: "남들과는 다르게\n 스타일과 실용성을  갖춘 집업 맨투맨!!" },
@@ -587,6 +588,13 @@
             };
         },
         mounted(){
+            if(window.location.hostname == 'formnj.github.io'){
+                this.path = '/cowell/';
+            } else {
+                this.path = '/'
+            }
+
+            console.log('main : '+this.path);
         },
         methods:{
         },
