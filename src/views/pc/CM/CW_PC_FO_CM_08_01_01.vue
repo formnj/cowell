@@ -34,7 +34,7 @@
             <swiper :options="brandOptions">
                 <swiper-slide v-for="(item, index) in brand_item" :key="index">
                     <div class="item">
-                        <router-link to="/cowell/pc/DP_01_01_01">
+                        <router-link :to="path+'pc/DP_01_01_01'">
                             <span class="thumb">
                                 <em><img v-bind:src="item.img" /></em>
                             </span>
