@@ -1,5 +1,6 @@
 <template>
     <div class="goods_item">
+        path : {{ path }}
         <a :href="path+'GD_01_01_01'"><!-- 퍼블 확인용 링크 -->
             <span class="thumb">
                 <em><img v-bind:src="item.img" /></em>
@@ -70,7 +71,7 @@ export default {
         isWish: false,
         isCart: false,
         optionActive: false,
-        path:'teste',
+        path: String,
     },
     mounted() {
         /* 23.04.04 PC 사이즈 옵션 레이어 노출 관련 */
@@ -97,7 +98,7 @@ export default {
         //     this.path = '/'
         // }
         path = window.location.pathname.split('/')[1];
-        // console.log('aaa:',path);
+        console.log('aaa:',window.location.pathname);
         if(path == 'pc' || path == undefined || path == '' || path == 'Guide'){
             this.path = '/pc/';
         }
