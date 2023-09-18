@@ -29,8 +29,8 @@
             $('.secret_menu').hide();
         });
 
-        var path,
-            device;
+        var path;//,
+            //device;
 
         if(window.location.hostname == 'formnj.github.io'){
             path = '/cowell/'; //git 확인 주소
@@ -38,7 +38,7 @@
             path = '/'; //local 확인 주소
         }
 
-        if(window.location.pathname.split('/')[1] == '' || window.location.pathname.split('/')[1] == 'pc'){
+        if(window.location.pathname.split('/')[1] == undefined || window.location.pathname.split('/')[1] == '' || window.location.pathname.split('/')[1] == 'pc'){
             device = 'pc';
         } else {
             device = 'mo';

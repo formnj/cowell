@@ -1,4 +1,4 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><link rel="icon" href="/cowell/favicon.ico"><title>cowell</title><script src="/cowell/js/jquery.min.js"></script><script src="/cowell/js/common.js"></script><script src="/cowell/js/swiper.js"></script><script defer="defer" src="/cowell/js/chunk-vendors.16f6343e.js"></script><script defer="defer" src="/cowell/js/app.d303eef7.js"></script><link href="/cowell/css/app.95105ebc.css" rel="stylesheet"></head><style>.secret_menu {background-color:#222; position:fixed; top:0; right:0; left:0; z-index:9999; display:none;}
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><link rel="icon" href="/cowell/favicon.ico"><title>cowell</title><script src="/cowell/js/jquery.min.js"></script><script src="/cowell/js/common.js"></script><script src="/cowell/js/swiper.js"></script><script defer="defer" src="/cowell/js/chunk-vendors.16f6343e.js"></script><script defer="defer" src="/cowell/js/app.f1a9827a.js"></script><link href="/cowell/css/app.95105ebc.css" rel="stylesheet"></head><style>.secret_menu {background-color:#222; position:fixed; top:0; right:0; left:0; z-index:9999; display:none;}
         .secret_menu ul {margin:0; list-style:none; display:flex;}
         .secret_menu li {flex:1; position:relative;}
         .secret_menu li + li:before {border-left:1px solid #fff; content:''; position:absolute; top:10px; bottom:10px; left:0;}
@@ -11,8 +11,8 @@
             $('.secret_menu').hide();
         });
 
-        var path,
-            device;
+        var path;//,
+            //device;
 
         if(window.location.hostname == 'formnj.github.io'){
             path = '/cowell/'; //git 확인 주소
@@ -20,7 +20,7 @@
             path = '/'; //local 확인 주소
         }
 
-        if(window.location.pathname.split('/')[1] == '' || window.location.pathname.split('/')[1] == 'pc'){
+        if(window.location.pathname.split('/')[1] == undefined || window.location.pathname.split('/')[1] == '' || window.location.pathname.split('/')[1] == 'pc'){
             device = 'pc';
         } else {
             device = 'mo';
